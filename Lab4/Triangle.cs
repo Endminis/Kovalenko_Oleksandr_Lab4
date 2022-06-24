@@ -13,17 +13,10 @@ namespace Lab4
         {
             Color = color;
         }
-        public override void IsPointBelongs(int x, int y)
+        public override bool IsPointBelongs(Point point)
         {
-            Random random = new Random();
-            if (random.Next(0, x+2) == x || random.Next(0, y+2) == y)
-            {
-                Console.WriteLine("Point belongs to this Triangle");
-            }
-            else
-            {
-                Console.WriteLine("Point does not belong to this Triangle");
-            }
+            Random random = new();
+            return (random.Next(0, point.X + 1) == point.X || random.Next(0, point.Y + 1) == point.Y);
         }
         public void CalculateAngles(Point A, Point B, Point C)
         {

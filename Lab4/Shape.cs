@@ -9,7 +9,7 @@ namespace Lab4
     abstract class Shape
     {
         public string Color;
-        public abstract void IsPointBelongs(int x, int y);
+        public abstract bool IsPointBelongs(Point point);
 
     }
 }
